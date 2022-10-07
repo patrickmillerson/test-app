@@ -36,10 +36,10 @@ if os.environ.get('DJANGO_DEVELOPMENT') == "true":
     
 else:
     DEBUG = False
-    STATIC_URL = '/tmp/build/staticfiles'
+    STATIC_URL = 'tmp/build/staticfiles'
 
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, '/static')
+        os.path.join(BASE_DIR, 'static')
     ]
 
 
