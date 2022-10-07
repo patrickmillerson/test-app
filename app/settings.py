@@ -28,7 +28,7 @@ if os.environ.get('DJANGO_DEVELOPMENT') == "true":
     STATIC_URL = 'static'
 
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static')
+        os.path.join(BASE_DIR, '/static')
     ]
 
 
@@ -39,7 +39,7 @@ else:
     STATIC_URL = '/tmp/build/staticfiles'
 
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, 'static')
+        os.path.join(BASE_DIR, '/static')
     ]
 
 
@@ -142,3 +142,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
